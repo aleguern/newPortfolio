@@ -1,31 +1,34 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
 
-class ProjectsContainer extends Component {
-  render() {
-    const projectImgs = this.props.ProjectImgs;
-    return (
-      <div className="container">
-        {projectImgs.map(el => {
-          if (el.node.childImageSharp)
-            return (
-              <div className="project">
-                <a href="#">
-                  <Img
-                    className="project-img"
-                    sizes={el.node.childImageSharp.sizes}
-                    title={el.node.name}
-                    alt={el.node.name}
-                  />
-                </a>
+const ProjectsContainer = props => {
+  const projectImgs = props.ProjectImgs;
+  const articles = props.Articles;
+  const slugs = props.Slugs;
 
-                <h3 className="project-title">Mon Pacte Dutreil</h3>
-                <h4 className="project-subtitle">FRONT-END</h4>
-              </div>
-            );
-        })}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="container">
+      {articles.map((article, index) => {
+        const image = projectImgs.find(n => {
+          return (
+            n.node.relativePath ===
+            `projects/${article.node.frontmatter.picture_filename}`
+          );
+        });
+        const imageSizes = image.node.childImageSharp.sizes;
+        const projectInfo = article.node.frontmatter;
+        return (
+          <div className="project" key={index}>
+            <a href={slugs[index].node.fields.slug}>
+              <Img className="project-img" sizes={imageSizes} />
+            </a>
+            <h3 className="project-title">{projectInfo.title}</h3>
+            <h4 className="project-subtitle">{projectInfo.type}</h4>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 export default ProjectsContainer;

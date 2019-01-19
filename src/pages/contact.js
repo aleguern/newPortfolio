@@ -1,16 +1,16 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Img from "gatsby-image";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 
 export default ({ data }) => {
   const { edges: icons } = data.icons;
   const { edges: SocialNetworksImgsData } = data.SocialNetworksImgs;
   return (
-    <>
-      <Navbar />
+    <Layout activeLink="Contact">
       <div
         className="bg-blue"
-        style={{ paddingTop: "170px", marginBottom: "0px" }}
+        style={{ paddingTop: "170px", marginBottom: "0px", height: "95vh" }}
       >
         <div className="container center contact">
           <div
@@ -22,11 +22,11 @@ export default ({ data }) => {
             <div>
               <h4 className="black">Contactez moi directement :</h4>
 
-              {icons.map(el => {
+              {icons.map((el, index) => {
                 switch (el.node.name) {
                   case "phone":
                     return (
-                      <>
+                      <div key={index}>
                         <Img
                           style={{
                             width: "20px",
@@ -45,11 +45,11 @@ export default ({ data }) => {
                         >
                           06 84 08 74 72
                         </p>
-                      </>
+                      </div>
                     );
                   case "mail3":
                     return (
-                      <>
+                      <div key={index}>
                         <Img
                           style={{
                             width: "20px",
@@ -68,19 +68,21 @@ export default ({ data }) => {
                         >
                           antoineleguern@yahoo.fr
                         </p>
-                      </>
+                      </div>
                     );
+                  default:
+                    console.log("error");
                 }
               })}
             </div>
           </div>
           <div className="right">
             <div className="contact-form">
-              {icons.map(el => {
+              {icons.map((el, index) => {
                 switch (el.node.name) {
                   case "avatar":
                     return (
-                      <div className="input small-input container">
+                      <div className="input small-input container" key={index}>
                         <Img
                           className="img"
                           sizes={el.node.childImageSharp.sizes}
@@ -94,7 +96,7 @@ export default ({ data }) => {
                     );
                   case "mail2":
                     return (
-                      <div className="input small-input container">
+                      <div className="input small-input container" key={index}>
                         <Img
                           className="img"
                           sizes={el.node.childImageSharp.sizes}
@@ -106,6 +108,8 @@ export default ({ data }) => {
                         />
                       </div>
                     );
+                  default:
+                    console.log("error");
                 }
               })}
               <div className="input">
@@ -129,15 +133,16 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
+
       <div
         className="footer bg-blue"
-        style={{ marginTop: "-32px", height: "120px" }}
+        style={{ marginTop: "-80px", height: "120px" }}
       >
         <ul style={{ marginLeft: "0px" }} className="navlink-container">
-          {SocialNetworksImgsData.map(el => {
+          {SocialNetworksImgsData.map((el, index) => {
             return (
               <>
-                <a href="#">
+                <a href="google.com" key={index}>
                   <li className="navlink">
                     <Img
                       style={{ width: "30px" }}
@@ -156,7 +161,7 @@ export default ({ data }) => {
           © 2019 Antoine Le Guern
         </span>
       </div>
-    </>
+    </Layout>
   );
 };
 
