@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import Button from "./../components/Button";
+import Button from "../components/Button";
 import SkillContainer from "../components/SkillContainer";
 import ProjectsContainer from "../components/ProjectsContainer";
 import ReferencesContainer from "../components/ReferencesContainer";
