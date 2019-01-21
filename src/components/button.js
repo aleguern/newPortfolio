@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 
 const Button = props => {
   let className = `btn btn-${props.color}`;
@@ -10,12 +10,13 @@ const Button = props => {
   );
 };
 
+/*
 Button.propTypes = {
   color: PropTypes.oneOf([
     "primary", // primary color, no underline
     "secondary" // inherit surrounding styles
   ]),
   href: PropTypes.string.isRequired
-};
+};*/
 
 export default Button;
