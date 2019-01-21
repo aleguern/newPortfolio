@@ -5,8 +5,9 @@ import Button from "../components/Button";
 import SkillContainer from "../components/SkillContainer";
 import ProjectsContainer from "../components/ProjectsContainer";
 import ReferencesContainer from "../components/ReferencesContainer";
-import header from "./../images/header/header.png";
+//import header from "./../images/header/header.png";
 import Layout from "./../components/Layout";
+import { Helmet } from "react-helmet";
 
 export default ({ data }) => {
   const { edges: ProjectImgsData } = data.ProjectImgs;
@@ -14,9 +15,50 @@ export default ({ data }) => {
   const { edges: SocialNetworksImgsData } = data.SocialNetworksImgs;
   const { edges: Articles } = data.Articles;
   const { edges: Slugs } = data.Slugs;
+  const { edges: headerImage } = data.headerImage;
+
+  //console.log(headerImage[0].node.);
 
   return (
     <Layout activeLink="Accueil">
+      <Helmet>
+        <meta charSet="utf-8" />
+
+        <title>Antoine Le Guern - Développeur Front-End</title>
+        <meta name="title" content="Antoine Le Guern - Développeur Front-End" />
+        <meta
+          name="description"
+          content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://blissful-davinci-b70cb2.netlify.com/"
+        />
+        <meta
+          property="og:title"
+          content="Antoine Le Guern - Développeur Front-End"
+        />
+        <meta
+          property="og:description"
+          content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
+        />
+        <meta property="og:image" content="" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://blissful-davinci-b70cb2.netlify.com/"
+        />
+        <meta
+          property="twitter:title"
+          content="Antoine Le Guern - Développeur Front-End"
+        />
+        <meta
+          property="twitter:description"
+          content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
+        />
+        <meta property="twitter:image" content="" />
+      </Helmet>
       <div>
         <div className="bg-blue">
           <div className="hero center">
@@ -38,10 +80,10 @@ export default ({ data }) => {
               <Button color="primary" value="Contacter" href="/contact" />
             </div>
             <div className="right">
-              <img
-                style={{ marginBottom: "-6px" }}
-                src={header}
+              <Img
+                style={{ marginBottom: "0px" }}
                 alt="antoine le guern"
+                sizes={headerImage[0].node.childImageSharp.fluid}
               />
             </div>
           </div>
@@ -73,26 +115,30 @@ export default ({ data }) => {
         <div className="footer bg-blue">
           <ul style={{ marginLeft: "0px" }} className="navlink-container">
             {SocialNetworksImgsData.map((el, index) => {
-              const imageSizes = el.node.childImageSharp.sizes;
+              const imageSizes = el.node.childImageSharp.fluid;
               const name = el.node.name;
               let link = "";
               switch (name) {
                 case "github":
                   link = "https://github.com/aleguern";
+                  break;
                 case "linkedin":
                   link = "https://www.linkedin.com/in/antoine-leguern/";
+                  break;
                 case "twitter":
                   link = "https://twitter.com/a_leguern";
+                  break;
                 default:
-                  console.log("error");
+                  console.log("error in logo pictures");
+                  break;
               }
               return (
                 <>
-                  <a href={link} key={index}>
-                    <li className="navlink">
+                  <li className="navlink">
+                    <a href={link} key={index}>
                       <Img style={{ width: "30px" }} sizes={imageSizes} />
-                    </li>
-                  </a>
+                    </a>
+                  </li>
                 </>
               );
             })}
@@ -120,8 +166,8 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(quality: 100) {
-              ...GatsbyImageSharpSizes
+            fluid(quality: 80) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -136,8 +182,8 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 320) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 320) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -145,15 +191,15 @@ export const query = graphql`
     }
     headerImage: allFile(
       sort: { order: ASC, fields: [absolutePath] }
-      filter: { relativePath: { regex: "/header/.*.png/" } }
+      filter: { relativePath: { regex: "/header/header.png/" } }
     ) {
       edges {
         node {
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 320) {
-              ...GatsbyImageSharpSizes
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -182,8 +228,8 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 320) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 320) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

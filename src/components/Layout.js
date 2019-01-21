@@ -20,9 +20,11 @@ class Layout extends Component {
                 ? (className = `navlink selected`)
                 : (className = `navlink`);
               return (
-                <Link className={className} to={el.link}>
-                  {el.name}
-                </Link>
+                <li>
+                  <Link className={className} to={el.link}>
+                    {el.name}
+                  </Link>
+                </li>
               );
             })}
           </ul>

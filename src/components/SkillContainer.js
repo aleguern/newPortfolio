@@ -118,7 +118,7 @@ const SkillContainer = props => {
         const image = SkillImgs.find(n => {
           return n.node.relativePath === `skills/${skill.name}.png`;
         });
-        const imageSizes = image.node.childImageSharp.sizes;
+        const imageSizes = image.node.childImageSharp.fluid;
         return (
           <Skill
             key={index}

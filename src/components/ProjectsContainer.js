@@ -15,7 +15,7 @@ const ProjectsContainer = props => {
             `projects/${article.node.frontmatter.picture_filename}`
           );
         });
-        const imageSizes = image.node.childImageSharp.sizes;
+        const imageSizes = image.node.childImageSharp.fluid;
         const projectInfo = article.node.frontmatter;
         return (
           <div className="project" key={index}>

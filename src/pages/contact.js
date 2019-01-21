@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 
 export default ({ data }) => {
@@ -8,6 +9,10 @@ export default ({ data }) => {
   const { edges: SocialNetworksImgsData } = data.SocialNetworksImgs;
   return (
     <Layout activeLink="Contact">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contactez-moi !</title>
+      </Helmet>
       <div
         className="bg-blue"
         style={{ paddingTop: "170px", marginBottom: "0px", height: "100%" }}
