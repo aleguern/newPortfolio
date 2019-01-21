@@ -199,7 +199,7 @@ h4 {
   padding: 5px;
 }
 .skill:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 .skill-img {
   max-height: 100%;
@@ -216,8 +216,13 @@ h4 {
   width: 400px;
   padding: 20px;
 }
+.project-box {
+  height: 250px;
+  display: flex;
+}
 .project-img {
   background-color: var(--lightgrey);
+  width: 100%;
 }
 .project-title {
   margin: 10px auto 3px auto;
@@ -292,7 +297,7 @@ h4 {
     margin: 3em auto;
     height: 235px;
     max-width: 400px;
-    margin-top: -20px;
+    margin-top: -80px;
     margin-bottom: -50px;
   }
   .contact .right {
@@ -301,6 +306,7 @@ h4 {
     height: 400px;
     margin: 0 auto;
     margin-left: -6px;
+    margin-top: 80px;
   }
 }
 .contact {

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Img from "gatsby-image";
 
 const skills = [
-  { name: "redux", link: "https://redux.js.org/", type: "front-end" },
   { name: "react", link: "https://reactjs.org/", type: "front-end" },
   {
     name: "react-native",
@@ -14,6 +13,7 @@ const skills = [
     link: "https://graphql.org/",
     type: "front-end"
   },
+  { name: "redux", link: "https://redux.js.org/", type: "front-end" },
   { name: "gatsby", link: "https://www.gatsbyjs.org/", type: "front-end" },
   {
     name: "html",
@@ -31,6 +31,7 @@ const skills = [
     type: "front-end"
   },
   { name: "node-js", link: "https://nodejs.org/en/", type: "back-end" },
+  { name: "my-sql", link: "https://www.mysql.com/fr/", type: "back-end" },
   {
     name: "materialize",
     link: "https://materializecss.com/",
@@ -39,6 +40,75 @@ const skills = [
   { name: "material-ui", link: "https://material-ui.com/", type: "front-end" },
   { name: "bootstrap", link: "https://getbootstrap.com/", type: "front-end" }
 ];
+
+const Tooltip = props => {
+  const text = props.text;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        zIndex: "3",
+        width: "50%",
+        height: "50%",
+        margin: "auto",
+        cursor: "pointer"
+      }}
+      className="skill-img"
+    >
+      {text}
+    </div>
+  );
+};
+
+class Skill extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isHovered: false
+    };
+    // this.enterButton = this.enterButton.bind(this);
+    // this.leaveButton = this.leaveButton.bind(this);
+  }
+
+  /*
+  enterButton() {
+    this.setState({
+      isHovered: true
+    });
+  }
+
+  leaveButton() {
+    setTimeout(() => {
+      this.setState({
+        isHovered: false
+      });
+    }, 100);
+  }
+*/
+  render() {
+    const skill = this.props.skill;
+    const imageSizes = this.props.imageSizes;
+    const key = this.props.index;
+    return (
+      <div
+        className="skill"
+        key={key}
+        //onMouseEnter={this.enterButton}
+        //onMouseLeave={this.leaveButton}
+      >
+        {/*this.state.isHovered && <Tooltip text={skill.name} />*/}
+        <a href={skill.link}>
+          <Img
+            className="skill-img"
+            alt={skill.name}
+            title={skill.name}
+            sizes={imageSizes}
+          />
+        </a>
+      </div>
+    );
+  }
+}
 
 const SkillContainer = props => {
   const SkillImgs = props.SkillImgs;
@@ -50,20 +120,15 @@ const SkillContainer = props => {
         });
         const imageSizes = image.node.childImageSharp.sizes;
         return (
-          <div className="skill" key={index}>
-            <a href={skill.link}>
-              <Img
-                className="skill-img"
-                alt={skill.name}
-                title={skill.name}
-                sizes={imageSizes}
-              />
-            </a>
-          </div>
+          <Skill
+            key={index}
+            skill={skill}
+            imageSizes={imageSizes}
+            index={index}
+          />
         );
       })}
     </div>
   );
 };
-
 export default SkillContainer;

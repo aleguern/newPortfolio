@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Img from "gatsby-image";
 
 const ProjectsContainer = props => {
@@ -20,7 +20,9 @@ const ProjectsContainer = props => {
         return (
           <div className="project" key={index}>
             <a href={slugs[index].node.fields.slug}>
-              <Img className="project-img" sizes={imageSizes} />
+              <div className="project-box">
+                <Img className="project-img" sizes={imageSizes} />
+              </div>
             </a>
             <h3 className="project-title">{projectInfo.title}</h3>
             <h4 className="project-subtitle">{projectInfo.type}</h4>

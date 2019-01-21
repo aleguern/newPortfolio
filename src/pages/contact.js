@@ -10,7 +10,7 @@ export default ({ data }) => {
     <Layout activeLink="Contact">
       <div
         className="bg-blue"
-        style={{ paddingTop: "170px", marginBottom: "0px", height: "95vh" }}
+        style={{ paddingTop: "170px", marginBottom: "0px", height: "100%" }}
       >
         <div className="container center contact">
           <div
@@ -136,7 +136,7 @@ export default ({ data }) => {
 
       <div
         className="footer bg-blue"
-        style={{ marginTop: "-80px", height: "120px" }}
+        style={{ marginTop: "0px", height: "120px" }}
       >
         <ul style={{ marginLeft: "0px" }} className="navlink-container">
           {SocialNetworksImgsData.map((el, index) => {

@@ -72,14 +72,24 @@ export default ({ data }) => {
         <div className="footer bg-blue">
           <ul style={{ marginLeft: "0px" }} className="navlink-container">
             {SocialNetworksImgsData.map((el, index) => {
+              const imageSizes = el.node.childImageSharp.sizes;
+              const name = el.node.name;
+              let link = "";
+              switch (name) {
+                case "github":
+                  link = "https://github.com/aleguern";
+                case "linkedin":
+                  link = "https://www.linkedin.com/in/antoine-leguern/";
+                case "twitter":
+                  link = "https://twitter.com/a_leguern";
+                default:
+                  console.log("error");
+              }
               return (
                 <>
-                  <a href="google.com" key={index}>
+                  <a href={link} key={index}>
                     <li className="navlink">
-                      <Img
-                        style={{ width: "30px" }}
-                        sizes={el.node.childImageSharp.sizes}
-                      />
+                      <Img style={{ width: "30px" }} sizes={imageSizes} />
                     </li>
                   </a>
                 </>
@@ -109,7 +119,7 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 320) {
+            sizes(quality: 100) {
               ...GatsbyImageSharpSizes
             }
           }
