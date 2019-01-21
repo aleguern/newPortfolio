@@ -2,7 +2,7 @@
 title: "Mon Pacte Dutreil"
 date: "15/08/2018"
 type: "FRONT-END"
-picture_filename: "mon-pacte-dutreil.png"
+picture_filename: "./mon-pacte-dutreil.png"
 ---
 
 ### Introduction

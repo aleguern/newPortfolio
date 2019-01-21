@@ -412,3 +412,25 @@ textarea:focus {
     transform: rotate(45deg);
   }
 }
+
+.project-page {
+  max-width: 750px;
+  margin-top: 100px;
+}
+.project-page .header {
+  display: flex;
+  justify-content: space-between;
+}
+.project-page .header .title {
+  display: inline-block;
+}
+.project-page .header .date {
+  display: inline-block;
+}
+.project-page .image {
+  margin: 30px;
+}
+.project-page .text {
+  text-align: justify;
+  text-justify: inter-word;
+}

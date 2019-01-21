@@ -16,11 +16,10 @@ export default ({ data }) => {
   const { edges: Articles } = data.Articles;
   const { edges: Slugs } = data.Slugs;
   const { edges: headerImage } = data.headerImage;
-
-  //console.log(headerImage[0].node.);
+  let activeLink = "Accueil";
 
   return (
-    <Layout activeLink="Accueil">
+    <Layout activeLink={activeLink}>
       <Helmet>
         <meta charSet="utf-8" />
 
@@ -211,7 +210,9 @@ export const query = graphql`
           frontmatter {
             title
             type
-            picture_filename
+            picture_filename {
+              relativePath
+            }
           }
           excerpt
           timeToRead

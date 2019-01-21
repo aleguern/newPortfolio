@@ -6,7 +6,7 @@ class Layout extends Component {
     const links = [
       { name: "Accueil", link: "/" },
       { name: "Portfolio", link: "/#projects" },
-      { name: "Compétences", link: "/#skills" },
+      { name: "Competences", link: "/#skills" },
       { name: "Contact", link: "/contact/" }
     ];
 

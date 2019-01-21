@@ -1,26 +1,22 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Img from "gatsby-image";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <div
-        className="center"
-        style={{
-          maxWidth: "750px",
-          marginTop: "100px"
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <h1 style={{ display: "inline-block" }}>{post.frontmatter.title}</h1>
-          <h3 style={{ display: "inline-block" }}>{post.frontmatter.date}</h3>
+      <div className="center project-page">
+        <div className="header">
+          <h2 className="title">{post.frontmatter.title}</h2>
+          <h3 className="date">{post.frontmatter.date}</h3>
         </div>
-        <div
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          style={{ textAlign: "justify", textJustify: "inter-word" }}
+        <Img
+          className="image"
+          sizes={post.frontmatter.picture_filename.childImageSharp.fluid}
         />
+        <div className="text" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   );
@@ -33,7 +29,13 @@ export const query = graphql`
       frontmatter {
         title
         date
-        picture_filename
+        picture_filename {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
   }

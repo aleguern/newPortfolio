@@ -81,59 +81,68 @@ export default ({ data }) => {
               })}
             </div>
           </div>
+
           <div className="right">
             <div className="contact-form">
-              {icons.map((el, index) => {
-                switch (el.node.name) {
-                  case "avatar":
-                    return (
-                      <div className="input small-input container" key={index}>
-                        <Img
-                          className="img"
-                          sizes={el.node.childImageSharp.sizes}
-                        />
-                        <input
-                          placeholder="Saisissez votre nom"
-                          type="text"
-                          name="fname"
-                        />
-                      </div>
-                    );
-                  case "mail2":
-                    return (
-                      <div className="input small-input container" key={index}>
-                        <Img
-                          className="img"
-                          sizes={el.node.childImageSharp.sizes}
-                        />
-                        <input
-                          placeholder="Saisissez votre mail"
-                          type="email"
-                          name="fname"
-                        />
-                      </div>
-                    );
-                  default:
-                    console.log("error");
-                }
-              })}
-              <div className="input">
-                <textarea
-                  style={{ height: "140px" }}
-                  placeholder="Votre message"
-                  name="fname"
-                  autocomplete="off"
-                />
-              </div>
+              <form action="https://formspree.io/your@email.com" method="POST">
+                {icons.map((el, index) => {
+                  switch (el.node.name) {
+                    case "avatar":
+                      return (
+                        <div
+                          className="input small-input container"
+                          key={index}
+                        >
+                          <Img
+                            className="img"
+                            sizes={el.node.childImageSharp.sizes}
+                          />
+                          <input
+                            placeholder="Saisissez votre nom"
+                            type="text"
+                            name="fname"
+                          />
+                        </div>
+                      );
+                    case "mail2":
+                      return (
+                        <div
+                          className="input small-input container"
+                          key={index}
+                        >
+                          <Img
+                            className="img"
+                            sizes={el.node.childImageSharp.sizes}
+                          />
+                          <input
+                            placeholder="Saisissez votre mail"
+                            type="email"
+                            name="_replyto"
+                          />
+                        </div>
+                      );
+                    default:
+                      console.log("error");
+                  }
+                })}
+                <div className="input">
+                  <textarea
+                    style={{ height: "140px" }}
+                    placeholder="Votre message"
+                    name="fname"
+                    autocomplete="off"
+                  />
+                </div>
 
-              <div>
-                <input
-                  id="submit"
-                  type="submit"
-                  value="Envoyer"
-                  onClick={e => alert("ok")}
-                />
-              </div>
+                <div>
+                  <input
+                    id="submit"
+                    type="submit"
+                    value="Envoyer"
+                    onClick={e => alert("ok")}
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </div>

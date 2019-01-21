@@ -27,10 +27,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/src/pages/`
+        path: `${__dirname}/src/pages/projects/`
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: true
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
