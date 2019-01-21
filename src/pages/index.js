@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import Button from "../components/Button";
+//import Button from "../components/Button";
 import SkillContainer from "../components/SkillContainer";
 import ProjectsContainer from "../components/ProjectsContainer";
 import ReferencesContainer from "../components/ReferencesContainer";
@@ -33,8 +33,10 @@ export default ({ data }) => {
               <p className="white">
                 Vous accompagner dans la réalisation de vos projets digitaux.
               </p>
+              {/*
               <Button color="secondary" value="Voir projets" href="#projects" />
               <Button color="primary" value="Contacter" href="/contact" />
+              */}
             </div>
             <div className="right">
               <img
