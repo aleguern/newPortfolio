@@ -26,7 +26,7 @@ const SEO = props => {
         property="og:description"
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
-      <meta property="og:image" content="header_bg.png" />
+      <meta property="og:image" content="" />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://antoineleguern.fr/" />
       <meta
@@ -37,7 +37,7 @@ const SEO = props => {
         property="twitter:description"
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
-      <meta property="twitter:image" content="header_bg.png" />
+      <meta property="twitter:image" content="" />
     </Helmet>
   );
 };

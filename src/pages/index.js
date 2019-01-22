@@ -105,7 +105,7 @@ export default ({ data }) => {
           </ul>
           <span
             className="white"
-            style={{ display: "block", textAlign: "center" }}
+            style={{ display: "block", textAlign: "center", marginTop: "15px" }}
           >
             © 2019 Antoine Le Guern
           </span>

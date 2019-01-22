@@ -51,40 +51,13 @@ class ReferencesContainer extends Component {
     return (
       <>
         <h2 className="blue title">Recommandations</h2>
-        <div
-          className="container"
-          style={{
-            height: "200px",
-            paddingTop: "40px"
-          }}
-        >
+        <div className="container reference-page">
           <span className="prev" onClick={this.previousReference}>
             &laquo;
           </span>
           <div>
-            <h3
-              className="blue"
-              style={{
-                fontSize: "1.7em",
-                fontWeight: "400",
-                textAlign: "center",
-                width: "100%",
-                paddingLeft: "20px",
-                paddingRight: "20px"
-              }}
-            >
-              {reference.text}
-            </h3>
-            <span
-              className="blue"
-              style={{
-                marginRight: "auto",
-                marginLeft: "auto",
-                marginTop: "20px"
-              }}
-            >
-              {reference.author}
-            </span>
+            <h3 className="blue reference-title">{reference.text}</h3>
+            <span className="blue reference-author">{reference.author}</span>
           </div>
           <span className="next" onClick={this.nextReference}>
             &raquo;

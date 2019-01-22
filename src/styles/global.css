@@ -358,11 +358,40 @@ textarea:focus {
   text-justify: inter-word;
 }
 
+.reference-page {
+  height: 200px;
+  padding-top: 40px;
+}
+.reference-title {
+  font-size: 1.7em;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.reference-author {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
 @media screen and (max-width: 400px) {
   .navlink {
     font-size: 0.95rem;
     padding: 0 2px 7px 2px;
     margin: 0 4px -10px 4px;
+  }
+  .reference-page {
+    height: 150px;
+  }
+  .reference-title {
+    margin-top: -20px;
+  }
+  .reference-author {
+    text-align: center;
+    width: 100%;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -370,8 +399,8 @@ textarea:focus {
     top: -70px;
   }
   .center {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
