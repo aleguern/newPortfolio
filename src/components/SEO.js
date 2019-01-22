@@ -3,6 +3,10 @@ import { Helmet } from "react-helmet";
 const SEO = props => {
   return (
     <Helmet>
+      <meta
+        name="google-site-verification"
+        content="ELekt-Sbgt9RpADgX_mOMIq6Oixi9PQYlRVLg1qWozo"
+      />
       <meta charSet="utf-8" />
       <title>Antoine Le Guern - Développeur Front-End</title>
 
