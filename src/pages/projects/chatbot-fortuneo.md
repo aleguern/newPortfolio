@@ -11,7 +11,7 @@ Réalisation d'un chatbot offrant aux collaborateurs un moyen de retrouver l’i
 
 ### Technologies
 
-**Google Chat API, NodeJS, Dialogflow API, Google Cloud Platform, ElasticSearch**
+**NodeJS, Dialogflow API, Google Chat API, Google Cloud Platform, ElasticSearch**
 
 ### Réalisation
 

@@ -41,62 +41,19 @@ const skills = [
   { name: "bootstrap", link: "https://getbootstrap.com/", type: "front-end" }
 ];
 
-const Tooltip = props => {
-  const text = props.text;
-  return (
-    <div
-      style={{
-        position: "absolute",
-        zIndex: "3",
-        width: "50%",
-        height: "50%",
-        margin: "auto",
-        cursor: "pointer"
-      }}
-      className="skill-img"
-    >
-      {text}
-    </div>
-  );
-};
-
 class Skill extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isHovered: false
     };
-    // this.enterButton = this.enterButton.bind(this);
-    // this.leaveButton = this.leaveButton.bind(this);
   }
-
-  /*
-  enterButton() {
-    this.setState({
-      isHovered: true
-    });
-  }
-
-  leaveButton() {
-    setTimeout(() => {
-      this.setState({
-        isHovered: false
-      });
-    }, 100);
-  }
-*/
   render() {
     const skill = this.props.skill;
     const imageSizes = this.props.imageSizes;
     const key = this.props.index;
     return (
-      <div
-        className="skill"
-        key={key}
-        //onMouseEnter={this.enterButton}
-        //onMouseLeave={this.leaveButton}
-      >
-        {/*this.state.isHovered && <Tooltip text={skill.name} />*/}
+      <div className="skill" key={key}>
         <a href={skill.link}>
           <Img
             className="skill-img"

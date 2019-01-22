@@ -6,17 +6,20 @@ import Img from "gatsby-image";
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout>
+    <Layout activeLink="Portfolio">
       <div className="center project-page">
-        <div className="header">
-          <h2 className="title">{post.frontmatter.title}</h2>
-          <h3 className="date">{post.frontmatter.date}</h3>
+        <div className="project-header">
+          <h2 className="project-title">{post.frontmatter.title}</h2>
+          <h3 className="project-date">{post.frontmatter.date}</h3>
         </div>
         <Img
-          className="image"
+          className="project-image"
           sizes={post.frontmatter.picture_filename.childImageSharp.fluid}
         />
-        <div className="text" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className="project-text"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </div>
     </Layout>
   );

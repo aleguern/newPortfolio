@@ -77,6 +77,7 @@ export default ({ data }) => {
                     );
                   default:
                     console.log("error");
+                    return false;
                 }
               })}
             </div>
@@ -123,6 +124,7 @@ export default ({ data }) => {
                       );
                     default:
                       console.log("error");
+                      return false;
                   }
                 })}
                 <div className="input">

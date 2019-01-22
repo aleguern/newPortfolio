@@ -22,7 +22,7 @@ class ReferencesContainer extends Component {
   }
 
   nextReference() {
-    if (this.state.currentReference == references.length - 1) {
+    if (this.state.currentReference === references.length - 1) {
       this.setState({
         currentReference: 0
       });
@@ -34,7 +34,7 @@ class ReferencesContainer extends Component {
   }
 
   previousReference() {
-    if (this.state.currentReference == 0) {
+    if (this.state.currentReference === 0) {
       this.setState({
         currentReference: references.length - 1
       });
@@ -68,9 +68,9 @@ class ReferencesContainer extends Component {
                 fontSize: "1.7em",
                 fontWeight: "400",
                 textAlign: "center",
-                marginLeft: "50px",
-                marginRight: "50px",
-                width: "600px "
+                width: "100%",
+                paddingLeft: "20px",
+                paddingRight: "20px"
               }}
             >
               {reference.text}

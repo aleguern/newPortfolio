@@ -29,7 +29,7 @@ const ProjectsContainer = props => {
               <h4 className="project-subtitle">{projectInfo.type}</h4>
             </div>
           );
-        }
+        } else return false;
       })}
     </div>
   );
