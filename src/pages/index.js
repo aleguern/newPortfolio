@@ -15,10 +15,11 @@ export default ({ data }) => {
   const { edges: Articles } = data.Articles;
   const { edges: Slugs } = data.Slugs;
   const { edges: headerImage } = data.headerImage;
+  const SEOimg = data.SEOImg;
 
   return (
     <Layout activeLink="Accueil">
-      <SEO />
+      <SEO SEOimg={SEOimg} />
       <div>
         <div className="bg-blue">
           <div className="hero center">
@@ -117,6 +118,13 @@ export default ({ data }) => {
 
 export const query = graphql`
   query allImgsQuery {
+    SEOImg: file(relativePath: { eq: "profile_cut.png" }) {
+      childImageSharp {
+        fluid(quality: 80) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     ProjectImgs: allFile(
       sort: { order: ASC, fields: [absolutePath] }
       filter: { relativePath: { regex: "/projects/.*.png/" } }
