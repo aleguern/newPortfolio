@@ -85,7 +85,10 @@ export default ({ data }) => {
 
           <div className="right">
             <div className="contact-form">
-              <form action="https://formspree.io/your@email.com" method="POST">
+              <form
+                action="https://formspree.io/antoineleguern@yahoo.fr"
+                method="POST"
+              >
                 {icons.map((el, index) => {
                   switch (el.node.name) {
                     case "avatar":

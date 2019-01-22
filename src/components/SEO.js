@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import image from "./profile_cut.png";
+
 const SEO = props => {
   return (
     <Helmet>
@@ -26,7 +28,7 @@ const SEO = props => {
         property="og:description"
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
-      <meta property="og:image" content="" />
+      <meta property="og:image" content={image} />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://antoineleguern.fr/" />
       <meta
@@ -37,7 +39,7 @@ const SEO = props => {
         property="twitter:description"
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
-      <meta property="twitter:image" content="" />
+      <meta property="twitter:image" content={image} />
     </Helmet>
   );
 };
