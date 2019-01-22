@@ -140,12 +140,7 @@ export default ({ data }) => {
                 </div>
 
                 <div>
-                  <input
-                    id="submit"
-                    type="submit"
-                    value="Envoyer"
-                    onClick={e => alert("ok")}
-                  />
+                  <input id="submit" type="submit" value="Envoyer" />
                 </div>
               </form>
             </div>
