@@ -2,8 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const SEO = props => {
-  const SEOimg = props.SEOimg.childImageSharp.fluid.sizes;
-  console.log(SEOimg);
+  const SEOimg = props.SEOimg.childImageSharp.fluid.src;
   return (
     <Helmet>
       <meta
