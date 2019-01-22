@@ -58,10 +58,24 @@ li {
   padding-left: 40px;
   padding-right: 40px;
 }
+
+@media screen and (max-width: 600px) {
+  .center {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 h2 {
   font-size: 2.5em !important;
   font-weight: 300 !important;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 2em !important;
+    font-weight: 300 !important;
+    text-align: center;
+  }
 }
 h3 {
   font-size: 1.4em !important;
@@ -75,8 +89,8 @@ h4 {
   width: 100%;
   background-color: var(--blue);
   position: fixed;
-  padding-top: 13px;
-
+  padding-top: 10px;
+  padding-bottom: 6px;
   top: 0;
   z-index: 8;
 }
@@ -100,6 +114,13 @@ h4 {
   .navlink {
     padding: 0 4px 7px 2px;
     margin: 0 8px -10px 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navlink {
+    font-size: 0.95rem;
+    padding: 0 2px 7px 2px;
+    margin: 0 4px -10px 4px;
   }
 }
 .navbar .navlink:hover {
@@ -129,7 +150,7 @@ h4 {
   align-self: flex-end;
   width: 50%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .hero {
     margin-top: 15px !important;
     padding-bottom: -15px !important;
@@ -166,6 +187,12 @@ h4 {
   text-decoration: none;
   margin-right: 15px;
 }
+@media screen and (max-width: 720px) {
+  .btn-secondary {
+    display: none;
+  }
+}
+
 .btn-primary {
   border: 0.088em solid white;
   background-color: var(--blue);
@@ -231,6 +258,14 @@ h4 {
   width: 400px;
   padding: 20px;
 }
+
+@media screen and (max-width: 800px) {
+  .project {
+    width: 400px;
+    padding: 20px;
+  }
+}
+
 .project-box {
   height: 250px;
   display: flex;
@@ -432,7 +467,9 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
 }
+
 .project-page-title {
+  text-align: left;
   display: inline-block;
 }
 .project-page-date {

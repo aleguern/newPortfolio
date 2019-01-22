@@ -77,7 +77,11 @@ class ReferencesContainer extends Component {
             </h3>
             <span
               className="blue"
-              style={{ float: "right", marginTop: "20px" }}
+              style={{
+                marginRight: "auto",
+                marginLeft: "auto",
+                marginTop: "20px"
+              }}
             >
               {reference.author}
             </span>

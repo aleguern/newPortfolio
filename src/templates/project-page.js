@@ -8,16 +8,16 @@ export default ({ data }) => {
   return (
     <Layout activeLink="Portfolio">
       <div className="center project-page">
-        <div className="project-header">
-          <h2 className="project-title">{post.frontmatter.title}</h2>
-          <h3 className="project-date">{post.frontmatter.date}</h3>
+        <div className="project-page-header">
+          <h2 className="project-page-title">{post.frontmatter.title}</h2>
+          <h3 className="project-page-date">{post.frontmatter.date}</h3>
         </div>
         <Img
-          className="project-image"
+          className="project-page-image"
           sizes={post.frontmatter.picture_filename.childImageSharp.fluid}
         />
         <div
-          className="project-text"
+          className="project-page-text"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
