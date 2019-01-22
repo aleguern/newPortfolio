@@ -17,10 +17,7 @@ const SEO = props => {
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
       <meta property="og:type" content="website" />
-      <meta
-        property="og:url"
-        content="https://blissful-davinci-b70cb2.netlify.com/"
-      />
+      <meta property="og:url" content="https://antoineleguern.fr/" />
       <meta
         property="og:title"
         content="Antoine Le Guern - Développeur Front-End"
@@ -29,12 +26,9 @@ const SEO = props => {
         property="og:description"
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
-      <meta property="og:image" content="" />
+      <meta property="og:image" content="header_bg.png" />
       <meta property="twitter:card" content="summary_large_image" />
-      <meta
-        property="twitter:url"
-        content="https://blissful-davinci-b70cb2.netlify.com/"
-      />
+      <meta property="twitter:url" content="https://antoineleguern.fr/" />
       <meta
         property="twitter:title"
         content="Antoine Le Guern - Développeur Front-End"
@@ -43,7 +37,7 @@ const SEO = props => {
         property="twitter:description"
         content="Antoine Le Guern, développeur front-end.  Découvrez tous mes projets et  compétences. N'hésitez pas à me contacter."
       />
-      <meta property="twitter:image" content="" />
+      <meta property="twitter:image" content="header_bg.png" />
     </Helmet>
   );
 };

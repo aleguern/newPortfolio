@@ -42,11 +42,6 @@ li {
   top: -120px;
   visibility: hidden;
 }
-@media screen and (max-width: 600px) {
-  .anchor {
-    top: -70px;
-  }
-}
 .title {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -59,23 +54,10 @@ li {
   padding-right: 40px;
 }
 
-@media screen and (max-width: 600px) {
-  .center {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 h2 {
   font-size: 2.5em !important;
   font-weight: 300 !important;
   text-align: center;
-}
-@media screen and (max-width: 800px) {
-  h2 {
-    font-size: 2em !important;
-    font-weight: 300 !important;
-    text-align: center;
-  }
 }
 h3 {
   font-size: 1.4em !important;
@@ -110,19 +92,7 @@ h4 {
   font-weight: 300;
   list-style: none;
 }
-@media screen and (max-width: 800px) {
-  .navlink {
-    padding: 0 4px 7px 2px;
-    margin: 0 8px -10px 8px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .navlink {
-    font-size: 0.95rem;
-    padding: 0 2px 7px 2px;
-    margin: 0 4px -10px 4px;
-  }
-}
+
 .navbar .navlink:hover {
   transition: border-width 0.1s ease;
   -webkit-transition: border-width 0.1s ease;
@@ -150,30 +120,6 @@ h4 {
   align-self: flex-end;
   width: 50%;
 }
-@media screen and (max-width: 720px) {
-  .hero {
-    margin-top: 15px !important;
-    padding-bottom: -15px !important;
-  }
-  .name {
-    display: block;
-  }
-  .hero {
-    height: 75vh;
-    max-height: 550px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .hero .left {
-    align-self: center;
-    width: 100%;
-  }
-  .hero .right {
-    align-self: flex-end;
-    display: none;
-  }
-}
 
 .btn {
   position: relative;
@@ -186,11 +132,6 @@ h4 {
   font-weight: 500;
   text-decoration: none;
   margin-right: 15px;
-}
-@media screen and (max-width: 720px) {
-  .btn-secondary {
-    display: none;
-  }
 }
 
 .btn-primary {
@@ -224,14 +165,6 @@ h4 {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 800px) {
-  .skills {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 30px;
-  }
-}
-
 .skill {
   width: 100px;
   height: 100px;
@@ -257,13 +190,6 @@ h4 {
 .project {
   width: 400px;
   padding: 20px;
-}
-
-@media screen and (max-width: 800px) {
-  .project {
-    width: 400px;
-    padding: 20px;
-  }
 }
 
 .project-box {
@@ -314,12 +240,6 @@ h4 {
   opacity: 0.3;
   user-select: none;
 }
-@media screen and (min-width: 900px) {
-  .next,
-  .prev {
-    display: block;
-  }
-}
 
 .contact .left {
   background-color: var(--white);
@@ -334,31 +254,6 @@ h4 {
   height: 400px;
 }
 
-@media screen and (max-width: 800px) {
-  .contact-form {
-    width: 300px;
-    margin: 0 auto;
-    padding-right: 15px;
-  }
-  .contact .left {
-    background-color: var(--white);
-    padding-top: 30px !important;
-    width: 90%;
-    margin: 3em auto;
-    height: 235px;
-    max-width: 400px;
-    margin-top: -80px;
-    margin-bottom: -50px;
-  }
-  .contact .right {
-    border: 1px solid var(--blue);
-    width: 100%;
-    height: 400px;
-    margin: 0 auto;
-    margin-left: -6px;
-    margin-top: 80px;
-  }
-}
 .contact {
   margin-top: 15px;
 }
@@ -421,11 +316,6 @@ textarea:focus {
   padding: 9px 14px 9px 14px;
   color: var(--white);
 }
-@media screen and (min-width: 800px) {
-  #submit {
-    margin-left: 227px;
-  }
-}
 #submit:hover {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -445,20 +335,6 @@ textarea:focus {
   left: 105%;
   transform: rotate(45deg);
 }
-@media screen and (max-width: 800px) {
-  #white-cube {
-    margin-top: -30px;
-    display: block;
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 220px;
-    left: 50%;
-    transform: rotate(45deg);
-  }
-}
-
 .project-page {
   max-width: 750px;
   margin-top: 100px;
@@ -467,7 +343,6 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
 }
-
 .project-page-title {
   text-align: left;
   display: inline-block;
@@ -481,4 +356,114 @@ textarea:focus {
 .project-page-text {
   text-align: justify;
   text-justify: inter-word;
+}
+
+@media screen and (max-width: 400px) {
+  .navlink {
+    font-size: 0.95rem;
+    padding: 0 2px 7px 2px;
+    margin: 0 4px -10px 4px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .anchor {
+    top: -70px;
+  }
+  .center {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .hero {
+    margin-top: 15px !important;
+    padding-bottom: -15px !important;
+  }
+  .name {
+    display: block;
+  }
+  .hero {
+    height: 75vh;
+    max-height: 550px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hero .left {
+    align-self: center;
+    width: 100%;
+  }
+  .hero .right {
+    align-self: flex-end;
+    display: none;
+  }
+
+  .btn-secondary {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navlink {
+    padding: 0 4px 7px 2px;
+    margin: 0 8px -10px 8px;
+  }
+  .contact-form {
+    width: 300px;
+    margin: 0 auto;
+    padding-right: 15px;
+  }
+  .contact .left {
+    background-color: var(--white);
+    padding-top: 30px !important;
+    width: 90%;
+    margin: 3em auto;
+    height: 235px;
+    max-width: 400px;
+    margin-top: -80px;
+    margin-bottom: -50px;
+  }
+  .contact .right {
+    border: 1px solid var(--blue);
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    margin-left: -6px;
+    margin-top: 80px;
+  }
+  .skills {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 30px;
+  }
+  .project {
+    width: 400px;
+    padding: 20px;
+  }
+  #white-cube {
+    margin-top: -30px;
+    display: block;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 220px;
+    left: 50%;
+    transform: rotate(45deg);
+  }
+  #submit {
+    margin-left: 227px;
+  }
+  h2 {
+    font-size: 2em !important;
+    font-weight: 300 !important;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .next,
+  .prev {
+    display: block;
+  }
 }
