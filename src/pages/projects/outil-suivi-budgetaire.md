@@ -15,6 +15,8 @@ Réalisation d'un outil de suivi budgétaire aidant les chefs de projets et resp
 
 ### Réalisation
 
-- Travail d'optimisation de l'expérience utilisateur en collaboration avec un designer
-- Echanges avec les différentes parties prenantes sur l'utilisation de l'outil
-- Utilisation d'un CMS afin de permettre au responsable de changer les condition de déclenchement des alertes
+Travail d'optimisation de l'expérience utilisateur en collaboration avec un designer,
+
+Echanges avec les différentes parties prenantes sur l'utilisation de l'outil,
+
+Utilisation d'un CMS afin de permettre au responsable de changer les conditions de déclenchement des alertes.

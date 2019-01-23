@@ -96,7 +96,12 @@ export default ({ data }) => {
               return (
                 <>
                   <li className="navlink">
-                    <a href={link} key={index}>
+                    <a
+                      href={link}
+                      key={index}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Img style={{ width: "30px" }} sizes={imageSizes} />
                     </a>
                   </li>

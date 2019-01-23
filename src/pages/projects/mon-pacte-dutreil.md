@@ -7,7 +7,7 @@ picture_filename: "./mon-pacte-dutreil.png"
 
 ### Introduction
 
-Accompagnement de l'équipe de MonPacteDutreil afin les aider à créer une présence en ligne au travers d'un site web et de supports digitaux.
+Accompagnement de l'équipe de MonPacteDutreil afin de les aider à créer une présence en ligne au travers d'un site web et de supports digitaux.
 
 ### Technologies
 
@@ -15,8 +15,14 @@ Accompagnement de l'équipe de MonPacteDutreil afin les aider à créer une pré
 
 ### Réalisation
 
-- Établissement d'un cahier des charges fonctionnel avec le client,
-- Création d'une identité visuelle, de supports de communication digitale et d'une maquette,
-- Développement et intégration du site,
-- Mise en ligne, Optimisation et SEO,
-- Suivi et reporting grâce à Google Analytics.
+Établissement d'un cahier des charges fonctionnel avec le client,
+
+Création d'une identité visuelle, de supports de communication digitale et d'une maquette,
+
+Développement et intégration du site,
+
+Mise en ligne,
+
+Optimisation et SEO,
+
+Suivi et reporting grâce à Google Analytics.

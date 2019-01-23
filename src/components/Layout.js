@@ -18,7 +18,7 @@ class Layout extends Component {
     const links = [
       { name: "Accueil", link: "/" },
       { name: "Portfolio", link: "/#projects" },
-      { name: "Competences", link: "/#skills" },
+      { name: "Compétences", link: "/#skills" },
       { name: "Contact", link: "/contact/" }
     ];
 

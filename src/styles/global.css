@@ -354,8 +354,6 @@ textarea:focus {
   margin: 20px;
 }
 .project-page-text {
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .reference-page {

@@ -15,5 +15,8 @@ Réalisation d'un chatbot offrant aux collaborateurs un moyen de retrouver l’i
 
 ### Réalisation
 
-- Réalisation d'un serveur en NodeJS
-- Utilisation des API Dialogflow et Google Chat
+Réalisation d'un serveur en NodeJS,
+
+Utilisation des API Dialogflow et Google Chat,
+
+Récolte des cas d'usages auprès des acteurs concernés.
