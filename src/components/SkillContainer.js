@@ -30,7 +30,8 @@ const skills = [
     link: "https://developer.mozilla.org/fr/docs/Web/javascript",
     type: "front-end"
   },
-  { name: "node-js", link: "https://nodejs.org/en/", type: "back-end" },
+  { name: "node-js", link: "https://www.mongodb.com/", type: "back-end" },
+  { name: "mongo-db", link: "https://nodejs.org/en/", type: "back-end" },
   { name: "my-sql", link: "https://www.mysql.com/fr/", type: "back-end" },
   {
     name: "materialize",

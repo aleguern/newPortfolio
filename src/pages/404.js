@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
-//import PropTypes from "prop-types";
 
 export default () => {
   return (
@@ -10,16 +9,13 @@ export default () => {
         <meta charSet="utf-8" />
         <title>Contactez-moi !</title>
       </Helmet>
-      <p>Vous vous êtes trompés de page ?</p>
+      <div>
+        <div className="bg-white">
+          <div className="center" style={{ marginTop: "150px" }}>
+            <h2>La page que vous semblez rechercher semble introuvable ...</h2>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
-
-/*
-Button.propTypes = {
-  color: PropTypes.oneOf([
-    "primary", // primary color, no underline
-    "secondary" // inherit surrounding styles
-  ]),
-  href: PropTypes.string.isRequired
-};*/
