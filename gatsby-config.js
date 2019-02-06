@@ -10,14 +10,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://www.antoineleguern.fr',
-        sitemap: 'https://www.antoineleguern.fr/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    }
+    "gatsby-plugin-robots-txt",
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
