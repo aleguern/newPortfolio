@@ -74,7 +74,7 @@ module.exports = {
         name: "Antoine Le Guern - Portfolio",
         short_name: "Antoine Le Guern",
         start_url: "/",
-        background_color: "#6b37bf",
+        background_color: "#006ec2",
         theme_color: "#006ec2",
         display: "standalone",
         icon: "src/images/icon.png"

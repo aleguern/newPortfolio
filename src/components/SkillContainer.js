@@ -13,6 +13,13 @@ const skills = [
     link: "https://graphql.org/",
     type: "front-end"
   },
+
+  {
+    name: "apollo",
+    link: "https://www.apollographql.com/",
+    type: "back-end"
+  },
+
   { name: "redux", link: "https://redux.js.org/", type: "front-end" },
   { name: "gatsby", link: "https://www.gatsbyjs.org/", type: "front-end" },
   {
@@ -31,6 +38,7 @@ const skills = [
     type: "front-end"
   },
   { name: "node-js", link: "https://www.mongodb.com/", type: "back-end" },
+  { name: "postgresql", link: "https://www.postgresql.org/", type: "back-end" },
   { name: "mongo-db", link: "https://nodejs.org/en/", type: "back-end" },
   { name: "my-sql", link: "https://www.mysql.com/fr/", type: "back-end" },
   {
