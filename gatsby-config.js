@@ -10,7 +10,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
-    "gatsby-plugin-robots-txt",
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Open Sans"]
+        }
+      }
+    },
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {

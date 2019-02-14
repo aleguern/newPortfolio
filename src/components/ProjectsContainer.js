@@ -26,7 +26,7 @@ const ProjectsContainer = props => {
                 </div>
               </a>
               <h3 className="project-title">{projectInfo.title}</h3>
-              <h4 className="project-subtitle">{projectInfo.type}</h4>
+              <h5 className="project-subtitle">{projectInfo.type}</h5>
             </div>
           );
         } else return false;

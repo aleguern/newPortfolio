@@ -33,7 +33,10 @@ export default ({ data }) => {
                   Le Guern
                 </span>
               </h1>
-              <p className="white">
+              <p
+                className="white"
+                style={{ fontWeight: "300", fontSize: "1.1em" }}
+              >
                 Vous accompagner dans la réalisation de vos projets digitaux.
               </p>
 

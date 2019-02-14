@@ -2,8 +2,9 @@ import React, { Component } from "react";
 
 const references = [
   {
-    text: "Merci pour tous ces bons moment de joie et de kiff.",
-    author: "Antoine Le Guern - Responsable des trucs"
+    text: `Un accompagnement sans faille de l’équipe Mon Pacte Dutreil dans la réalisation de l’interface web et mobile. 
+    Antoine a été proactif et force de proposition tout au long de la mission. On recommande les yeux fermés !`,
+    author: `Ronan Lajoux, avocat, fondateur du site www.mon-pacte-dutreil.fr`
   },
   {
     text: "COUCOU",
@@ -52,16 +53,16 @@ class ReferencesContainer extends Component {
       <>
         <h2 className="blue title">Recommandations</h2>
         <div className="container reference-page">
-          <span className="prev" onClick={this.previousReference}>
+          {/*<span className="prev" onClick={this.previousReference}>
             &laquo;
-          </span>
+    </span>*/}
           <div>
             <h3 className="blue reference-title">{reference.text}</h3>
             <span className="blue reference-author">{reference.author}</span>
           </div>
-          <span className="next" onClick={this.nextReference}>
+          {/*<span className="next" onClick={this.nextReference}>
             &raquo;
-          </span>
+  </span> */}
         </div>
       </>
     );
