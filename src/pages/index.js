@@ -19,7 +19,7 @@ export default ({ data }) => {
 
   return (
     <Layout activeLink="Accueil">
-      <SEO SEOimg={SEOimg} />
+      <SEO SEOimg={SEOimg} title="Antoine Le Guern - Développeur Front-End" />
       <div>
         <div className="bg-blue">
           <div className="hero center">

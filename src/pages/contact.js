@@ -12,6 +12,7 @@ export default ({ data }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Contactez-moi !</title>
+        <meta name="title" content="Contactez-moi !" />
       </Helmet>
       <div
         className="bg-blue"
